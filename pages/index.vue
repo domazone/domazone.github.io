@@ -77,7 +77,7 @@ export default {
     }
   },
   created() {
-    http.get('http://localhost:3000/domains?' + querystring.stringify(this.filters))
+    http.get('https://etsp89w9ah.execute-api.us-east-1.amazonaws.com/dev/domains?' + querystring.stringify(this.filters))
         .then(function (response) {
           this.last_evel_key = response.data.last_eval_key
           console.log(this.last_evel_key)
